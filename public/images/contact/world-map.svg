@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title">
+  <title id="title">Stylized world map</title>
+  <rect width="1200" height="620" fill="#101820"/>
+  <g opacity="0.18" stroke="#25D6A2" stroke-width="1">
+    <path d="M0 110h1200M0 210h1200M0 310h1200M0 410h1200M0 510h1200"/>
+    <path d="M120 0v620M240 0v620M360 0v620M480 0v620M600 0v620M720 0v620M840 0v620M960 0v620M1080 0v620"/>
+  </g>
+  <g fill="#6D4CF6" opacity="0.34">
+    <path d="M135 170l55-36 78 9 43 32-18 40 37 26-16 45-70 14-74-28-45-50z"/>
+    <path d="M284 302l44 18 28 50-22 64-35 42-44-24-16-72z"/>
+    <path d="M417 132l80-28 105 16 63 42-18 50-78 6-50 42-88-18-48-55z"/>
+    <path d="M590 234l62-30 76 14 44 46-24 50-73 8-72-32z"/>
+    <path d="M742 142l86-34 122 18 73 58-18 74-82 28-98-24-88-58z"/>
+    <path d="M898 312l66-24 84 28 32 54-42 42-72-12-68-40z"/>
+    <path d="M1022 446l58-20 48 24 18 42-36 32-62-10-42-34z"/>
+  </g>
+  <g fill="#25D6A2" opacity="0.26">
+    <path d="M396 248l44-20 52 14 30 34-20 36-50 2-48-24z"/>
+    <path d="M720 286l48-18 58 18 28 40-28 38-62-2-48-34z"/>
+    <path d="M815 410l42-12 46 16 22 34-22 30-48-4-38-28z"/>
+  </g>
+  <g opacity="0.55">
+    <circle cx="658" cy="352" r="118" fill="none" stroke="#25D6A2" stroke-width="1.5"/>
+    <circle cx="658" cy="352" r="72" fill="none" stroke="#6D4CF6" stroke-width="1.5"/>
+    <path d="M195 448C346 356 486 346 658 352c150 6 260-34 370-120" fill="none" stroke="url(#route)" stroke-width="3"/>
+  </g>
+  <defs>
+    <linearGradient id="route" x1="180" y1="450" x2="1030" y2="230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D4CF6" stop-opacity="0"/>
+      <stop offset="0.48" stop-color="#6D4CF6"/>
+      <stop offset="1" stop-color="#25D6A2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
