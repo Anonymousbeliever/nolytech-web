@@ -1,4 +1,4 @@
-import { BotMessageSquare, Building2, Cloud, CreditCard, Globe, Headphones, MessageCircle } from 'lucide-react'
+import { BotMessageSquare, Building2, Cloud, CreditCard, Globe, Headphones, MessageCircle, MonitorSmartphone } from 'lucide-react'
 
 // `featured` marks the platforms shown on the Solutions page and in the navbar menu
 export const solutions = [
@@ -49,6 +49,19 @@ export const solutions = [
     proof: ['Chat-based request flows', 'Automated responses', 'WhatsApp-connected support', 'AI-assisted business processes'],
     modules: ['Website chatbots', 'WhatsApp bots', 'Automated replies', 'Document summaries', 'Internal AI assistants', 'Workflow automation'],
     outcome: 'Helps organizations respond faster, reduce manual workload, and improve customer or member experience.',
+  },
+  {
+    id: 'mobidachi',
+    featured: true,
+    icon: MonitorSmartphone,
+    title: 'Mobidachi Android Device Management',
+    sector: 'Enterprise IT',
+    image: '/images/solutions/mobidachi.webp',
+    website: 'https://mobidachi.com/',
+    description: 'An enterprise Android device management platform that helps businesses secure, monitor, and manage their device fleets from one centralised console.',
+    proof: ['Centralised Android fleet management', 'Enterprise security and policy controls', 'Application and device administration', 'Responsive management across desktop and mobile'],
+    modules: ['Device enrollment', 'Application management', 'Security policies', 'Fleet visibility', 'Compliance monitoring', 'Enterprise administration'],
+    outcome: 'Lets IT teams manage company-owned Android devices from one dashboard instead of configuring each device individually.',
   },
   {
     id: 'whatsapp-business-systems',

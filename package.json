@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "node scripts/deploy.mjs",
+    "rollback": "node scripts/deploy.mjs --rollback",
     "lint": "eslint .",
     "preview": "vite preview"
   },

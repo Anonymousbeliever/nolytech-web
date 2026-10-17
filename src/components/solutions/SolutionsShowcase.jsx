@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Check } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 
 const platforms = [
   {
@@ -50,6 +50,19 @@ const platforms = [
     modules: ['AI assistant', 'Automation flows', 'Knowledge base'],
     outcome: 'Helps teams answer routine questions instantly and hand conversations over to a person when it matters.',
     proof: ['Human handoff', 'WhatsApp integration'],
+  },
+  {
+    id: 'mobidachi',
+    product: 'Mobidachi',
+    sector: 'Enterprise IT and device fleets',
+    title: 'Mobidachi Android Device Management',
+    image: '/images/solutions/mobidachi.webp',
+    alt: 'Mobidachi dashboard on a laptop and smartphone, showing device status, activity and policies for an Android fleet',
+    text: 'An enterprise Android device management platform that helps businesses secure, monitor and manage their device fleets from one centralised console. Built around Android Enterprise, it simplifies enrollment, app management, security policies and fleet visibility.',
+    modules: ['Device enrollment', 'Application management', 'Security policies'],
+    outcome: 'Lets IT teams manage company-owned Android devices across locations and departments from one dashboard, instead of configuring each device individually.',
+    proof: ['Centralised Android fleet management', 'Enterprise security and policy controls'],
+    website: 'https://mobidachi.com/',
   },
 ]
 
@@ -188,10 +201,17 @@ export default function SolutionsShowcase() {
                     ))}
                   </ul>
                 </div>
-                <Link to={`/contact?service=${encodeURIComponent(p.title)}`} className="slx-link">
-                  Ask about {p.product}
-                  <ArrowRight size={15} strokeWidth={2} aria-hidden="true" />
-                </Link>
+                {p.website ? (
+                  <a href={p.website} target="_blank" rel="noreferrer" className="slx-link">
+                    Visit {p.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                    <ArrowUpRight size={15} strokeWidth={2} aria-hidden="true" />
+                  </a>
+                ) : (
+                  <Link to={`/contact?service=${encodeURIComponent(p.title)}`} className="slx-link">
+                    Ask about {p.product}
+                    <ArrowRight size={15} strokeWidth={2} aria-hidden="true" />
+                  </Link>
+                )}
               </article>
             ))}
           </div>

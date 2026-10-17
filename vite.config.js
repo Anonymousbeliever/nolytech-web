@@ -7,4 +7,8 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    // Test builds go here. nginx serves dist/, which only `npm run deploy` writes to.
+    outDir: 'build',
+  },
 })

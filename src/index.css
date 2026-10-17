@@ -8051,7 +8051,6 @@ a.ft-contact:hover .ft-contact-value {
   position: absolute;
   top: 0;
   left: 50%;
-  translate: -50% 0;
   color: #221E2E;
   font-size: clamp(120px, 21vw, 330px);
   font-weight: 600;
@@ -8059,14 +8058,15 @@ a.ft-contact:hover .ft-contact-value {
   letter-spacing: -0.07em;
   white-space: nowrap;
   opacity: 0;
-  transform: translateY(30%);
+  /* Centring lives inside transform: the minifier drops a separate `translate` next to `transform` */
+  transform: translate(-50%, 30%);
   transition: transform 1.4s var(--nx-ease-out), opacity 1.2s ease;
   user-select: none;
 }
 
 .ft-footer.is-on .ft-word {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 @media (max-width: 980px) {
@@ -8088,7 +8088,7 @@ a.ft-contact:hover .ft-contact-value {
 @media (prefers-reduced-motion: reduce) {
   .ft-word {
     opacity: 1;
-    transform: none;
+    transform: translate(-50%, 0);
     transition: none;
   }
 }
@@ -8325,4 +8325,39 @@ a.ft-contact:hover .ft-contact-value {
   .sp-bar {
     transition: none;
   }
+}
+
+/* Mobidachi preview card keeps the product's own identity: dark navy with lime accents */
+.sl-ui-card.is-mobidachi {
+  border-color: #1E2A3D;
+  background: #0D1524;
+  color: #E8EEF7;
+}
+
+.sl-ui-card.is-mobidachi .sl-ui-title {
+  border-bottom-color: #1E2A3D;
+  color: #B5F23D;
+}
+
+.sl-ui-card.is-mobidachi .sl-ui-muted,
+.sl-ui-card.is-mobidachi .sl-ui-row-label {
+  color: #8C98AD;
+}
+
+.sl-ui-card.is-mobidachi .sl-ui-big {
+  color: #FFFFFF;
+}
+
+.sl-ui-card.is-mobidachi .sl-ui-row {
+  border-top-color: #1E2A3D;
+}
+
+.sl-ui-badge.is-lime {
+  background: rgba(181, 242, 61, 0.14);
+  color: #B5F23D;
+}
+
+.sl-ui-card.is-mobidachi .sl-ui-badge.is-amber {
+  background: rgba(245, 180, 60, 0.14);
+  color: #F5B43C;
 }

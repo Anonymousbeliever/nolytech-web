@@ -5,7 +5,7 @@ import { ArrowRight, Check } from 'lucide-react'
 const reasons = [
   ['Business-first approach', 'We map how your teams, approvals and reports work before we build.'],
   ['One team, end to end', 'Software, automation, cloud and networks handled by the same people.'],
-  ['Ready-built platforms', 'Start faster with SACCO 360, Business ERP and NolyDesk.'],
+  ['Ready-built platforms', 'Start faster with SACCO 360, Business ERP, NolyDesk and Mobidachi.'],
   ['Practical AI and automation', 'AI where it removes real manual work, not as a gimmick.'],
   ['Local business understanding', 'We understand the operating realities of Kenyan businesses, SACCOs, institutions, churches and growing teams.'],
   ['Honest scoping', 'Clear about the right approach, the likely scope and what it will take.'],

@@ -28,7 +28,9 @@ Avoid positioning Nolytech only as an “ICT company”. Use stronger language s
 
 ```bash
 npm run dev          # Start Vite dev server, usually http://localhost:5173 unless the port is busy
-npm run build        # Production build → dist/
+npm run build        # Test build → build/ (safe: the live site never reads it)
+npm run deploy       # Publish to nolytech.co.ke: builds to a temp folder, swaps into dist/ only on success
+npm run rollback     # Restore the previous live version (kept in .dist-previous/)
 npm run lint         # ESLint check
 npm run preview -- --host 0.0.0.0   # Preview the production build
 ```
@@ -226,7 +228,11 @@ For UI work, prefer this workflow:
 
 ## Deployment
 
-`npm run build` outputs to `dist/`.
+The live site is served by nginx on this server directly from `/home/dev/web_files/nolytech-react/dist` (config: `/etc/nginx/sites-available/nolytech`). Anything written to `dist/` is live immediately.
+
+* Never build into `dist/` to test. Use `npm run build` (outputs to `build/`).
+* Publish only with `npm run deploy` (`scripts/deploy.mjs`), and only when the user asks to go live.
+* `npm run rollback` swaps back to the previous deploy.
 
 The web server must rewrite all routes to `index.html` for React Router to work:
 

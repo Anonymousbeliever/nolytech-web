@@ -29,3 +29,10 @@ dist-ssr
 # Locally installed agent skills (reinstall from skills-lock.json)
 .agents/
 .claude/skills/
+
+# Test builds and deploy staging (dist/ is the live site, written only by npm run deploy)
+build
+.deploy-tmp
+.dist-previous
+.dist-swap
+.dist-restore

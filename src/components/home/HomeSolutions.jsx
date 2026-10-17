@@ -47,6 +47,17 @@ const items = [
       ['Web & WhatsApp', 'Instant answers with human handoff'],
     ],
   },
+  {
+    id: 'mobidachi',
+    label: 'Device management',
+    title: 'Mobidachi Android Device Management',
+    text: 'Enroll, secure and monitor company-owned Android devices from one console, with app management and security policies built on Android Enterprise.',
+    preview: 'mdm',
+    facts: [
+      ['Mobidachi', 'Enterprise Android device management'],
+      ['Fleet visibility', 'Status and compliance at a glance'],
+    ],
+  },
 ]
 
 export default function HomeSolutions() {
@@ -156,6 +167,24 @@ function Preview({ kind }) {
     )
   }
 
+  if (kind === 'mdm') {
+    // Mobidachi's own identity: dark navy with lime accents
+    return (
+      <PreviewCard title="Mobidachi" className="is-mobidachi">
+        <div className="sl-ui-figure sl-ui-figure-row">
+          {[['Total devices', '48'], ['Online', '42'], ['Compliance', '96%']].map(([label, value]) => (
+            <div key={label} className="sl-ui-figure">
+              <span className="sl-ui-muted">{label}</span>
+              <span className="sl-ui-big">{value}</span>
+            </div>
+          ))}
+        </div>
+        <Row label="Samsung Galaxy A54" value={<span className="sl-ui-badge is-lime">Compliant</span>} />
+        <Row label="Tecno Spark 10" value={<span className="sl-ui-badge is-amber">Blocked</span>} />
+      </PreviewCard>
+    )
+  }
+
   return (
     <PreviewCard title="NolyDesk AI">
       <div className="sl-ui-chat">
@@ -166,9 +195,9 @@ function Preview({ kind }) {
   )
 }
 
-function PreviewCard({ title, children }) {
+function PreviewCard({ title, className = '', children }) {
   return (
-    <div className="sl-ui-card">
+    <div className={`sl-ui-card ${className}`}>
       <div className="sl-ui-title">{title}</div>
       <div className="sl-ui-body">{children}</div>
     </div>
